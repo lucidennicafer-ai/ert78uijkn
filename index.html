@@ -1,1 +1,34 @@
-
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FFE86D">
+  <title>ПомПуш — маленькое счастье в вашем доме</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="paw" viewBox="0 0 48 48"><ellipse cx="11" cy="18" rx="5.2" ry="8" transform="rotate(-25 11 18)"/><ellipse cx="21" cy="11" rx="5.2" ry="8"/><ellipse cx="33" cy="12" rx="5.2" ry="8" transform="rotate(14 33 12)"/><ellipse cx="41" cy="23" rx="5" ry="7" transform="rotate(28 41 23)"/><path d="M12 36c0-7 8-17 14-17s15 12 15 18c0 9-10 8-15 5-6 3-14 2-14-6Z"/></symbol>
+    <symbol id="home" viewBox="0 0 32 32"><path d="M3 14 16 3l13 11v15H20V19h-8v10H3Z"/></symbol>
+    <symbol id="heart" viewBox="0 0 32 32"><path d="M16 29 4 17C-6 6 9-4 16 6c7-10 22 0 12 11Z"/></symbol>
+    <symbol id="chat" viewBox="0 0 32 32"><path d="M7 4h19a5 5 0 0 1 5 5v12a5 5 0 0 1-5 5H12l-7 6v-6a5 5 0 0 1-4-5V9a5 5 0 0 1 6-5Z"/><circle cx="9" cy="15" r="2" fill="var(--accent)"/><circle cx="16" cy="15" r="2" fill="var(--accent)"/><circle cx="23" cy="15" r="2" fill="var(--accent)"/></symbol>
+    <symbol id="user" viewBox="0 0 32 32"><circle cx="16" cy="9" r="7"/><path d="M3 30c0-16 26-16 26 0Z"/></symbol>
+    <symbol id="bell" viewBox="0 0 32 32"><path d="M5 20V13c0-6 3-10 9-10V1h4v2c6 0 9 4 9 10v7l3 5H2Z"/><path d="M11 27h10c-1 7-9 7-10 0Z"/></symbol>
+    <symbol id="filter" viewBox="0 0 32 32"><path d="M1 3h30L20 17v13l-8-4v-9Z"/></symbol>
+    <symbol id="back" viewBox="0 0 32 32"><path d="m24 3-17 13 17 13" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="send" viewBox="0 0 32 32"><path d="m4 4 25 12L4 28l4-12Zm4 12h21" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="close" viewBox="0 0 32 32"><path d="m7 7 18 18M25 7 7 25" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+  </svg>
+  <main id="stage" class="stage"><div id="app" class="phone" aria-label="Прототип приложения ПомПуш"></div></main>
+  <dialog id="profile-dialog" class="modal">
+    <form id="profile-form"><div class="modal-heading"><h2>Редактировать профиль</h2><button class="icon-button" type="button" data-close-dialog aria-label="Закрыть"><svg><use href="#close"/></svg></button></div>
+      <label>Имя<input name="name" required maxlength="40" autocomplete="given-name"></label>
+      <label>Логин<input name="login" required maxlength="40" autocomplete="username"></label>
+      <label>Город<input name="city" required maxlength="60" autocomplete="address-level2"></label>
+      <button class="button primary" type="submit">Сохранить</button>
+    </form>
+  </dialog>
+</body>
+</html>
